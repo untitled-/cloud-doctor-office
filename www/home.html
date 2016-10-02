@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+    <ion-side-menus>
+      <ion-side-menu-content>
+          <ion-header-bar class="bar bar-header bar-dark">
+              <button class="button button-icon icon ion-navicon"></button>
+              <h1 class="title">Patients</h1>
+          </ion-header-bar>
+
+          <ion-content>
+              <div class="list">
+                    <a class="item item-thumbnail-left" href="#">
+                      <img src="img/pacients/test_01.jpg">
+                      <h2>Pedro Fernando Márquez Soto</h2>
+                          <p>
+                            <i class="icon ion-calendar"></i>
+                            3/september/2016
+                          </p>
+                          <p>
+                            <i class="icon ion-pin"></i>
+                            1/october/2016
+                          </p>
+                          <p>
+                            <i class="icon ion-medkit"></i>
+                            Alcoholic
+                          </p>
+                    </a>
+                    <a class="item item-thumbnail-left" href="#">
+                      <img src="img/pacients/test_02.jpg">
+                      <h2>Eduardo Herrera Merino</h2>
+                          <p>
+                            <i class="icon ion-calendar"></i>
+                            2/september/2016
+                          </p>
+                          <p>
+                            <i class="icon ion-pin"></i>
+                            2/october/2016
+                          </p>
+                          <p>
+                            <i class="icon ion-medkit"></i>
+                            Sociopath
+                          </p>
+                    </a>
+                </div>
+            </ion-content>
+                <div class="tabs tabs-icon-top">
+                  <a class="tab-item">
+                    <i class="icon ion-search"></i>
+                    Search
+                  </a>
+                  <a class="tab-item">
+                    <i class="icon ion-clock"></i>
+                    Sort by Appointment
+                  </a>
+                  <a class="tab-item">
+                    <i class="icon ion-arrow-down-c"></i>
+                    Sort A-Z
+                  </a>
+                  <a class="tab-item" href="new_patient.html">
+                    <i class="icon ion-person-add"></i>
+                    Add Patient
+                  </a>
+                </div>
+        </ion-side-menu-content>
+        
+        <ion-side-menu side="left" expose-aside-when="large">
+            <ion-header-bar class="bar-dark">
+                <h1 class="title">Menu</h1>
+            </ion-header-bar>
+            <ion-content>
+                <div class="list">
+                  <a class="item item-icon-left" href="#">
+                    <i class="icon ion-calendar"></i>
+                    Calendar
+                  </a>
+                  <a class="item item-icon-left" href="#">
+                    <i class="icon ion-clock"></i>
+                    Daily Appointments
+                  </a>
+                  <a class="item item-icon-left" href="#">
+                    <i class="icon ion-person-stalker"></i>
+                    Patient List
+                  </a>
+                </div>
+            </ion-content>
+        </ion-side-menu>
+        
+      </ion-side-menus>
+  </body>
+</html>
