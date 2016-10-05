@@ -1,0 +1,157 @@
+<ion-view>
+  <ion-nav-bar class="bar-dark">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+
+    <ion-nav-title>
+      New Patient
+    </ion-nav-title>
+
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+      </button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+      <button class="button button-icon" ng-click="logout()" ng-show="loggedInUser">
+        <i class="icon ion-android-exit"></i>
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content>
+  <div class="list card">
+    <div class="item item-divider">
+      Identification File
+    </div>
+    <div class="list">
+      <label class="item item-input">
+        <i class="icon ion-person placeholder-icon"></i>
+        <input type="text" placeholder="Name">
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-camera placeholder-icon"></i>
+        <button class="button button-clear button-stable">
+          Take Picture
+        </button>
+      </label>
+      <label class="item item-input item-select">
+        <i class="icon ion-transgender placeholder-icon"></i>
+        <div class="input-label placeholder-icon">
+          Gender
+        </div>
+        <select>
+          <option selected>Female</option>
+          <option>Male</option>
+          <option>Transgender</option>
+        </select>
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-calendar placeholder-icon"></i>
+        <span class="input-label placeholder-icon">Birthdate</span>
+        <input type="date">
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-map placeholder-icon"></i>
+        <input type="text" placeholder="Birthplace">
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-home placeholder-icon"></i>
+        <input type="text" placeholder="Address">
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-iphone placeholder-icon"></i>
+        <input type="tel" placeholder="Phone">
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-email placeholder-icon"></i>
+        <input type="email" placeholder="Mail">
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-briefcase placeholder-icon"></i>
+        <input type="text" placeholder="Ocupation">
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-star placeholder-icon"></i>
+        <input type="text" placeholder="Religion">
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-clipboard placeholder-icon"></i>
+        <textarea placeholder="Religion Restrictions"></textarea>
+      </label>
+      <label class="item item-input item-select">
+        <i class="icon ion-heart placeholder-icon"></i>
+        <div class="input-label placeholder-icon">
+          Marital Status
+        </div>
+        <select>
+          <option selected>Single</option>
+          <option>Married</option>
+          <option>Concubinage</option>
+          <option>Divorced</option>
+          <option>Widowed</option>
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <i class="icon ion-university placeholder-icon"></i>
+        <div class="input-label placeholder-icon">
+          Scholarship
+        </div>
+        <select>
+          <option selected>Primary school</option>
+          <option>Middle school</option>
+          <option>Highshool</option>
+          <option>University</option>
+          <option>Posgraduate</option>
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <i class="icon ion-waterdrop placeholder-icon"></i>
+        <div class="input-label placeholder-icon">
+          Blood Type
+        </div>
+        <select>
+          <option selected>0+</option>
+          <option>O-</option>
+          <option>A+</option>
+          <option>A-</option>
+          <option>B+</option>
+          <option>B</option>
+          <option>AB+</option>
+          <option>AB-</option>
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <i class="icon ion-medkit placeholder-icon"></i>
+        <div class="input-label placeholder-icon">
+          Health Insurance Type
+        </div>
+        <select>
+          <option selected>Public</option>
+          <option>Private</option>
+        </select>
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-asterisk placeholder-icon"></i>
+        <input type="text" placeholder="Social Security ID">
+      </label>
+    </div>
+  </div>
+
+</ion-content>
+
+<div class="tabs tabs-icon-top">
+  <a class="tab-item">
+    <i class="icon ion-checkmark"></i>
+    Save
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-close" ng-click="ctrl.cancel()"></i>
+    Cancel
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-trash-a"></i>
+    Delete
+  </a>
+</div>
+</ion-view>

@@ -21,3 +21,11 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+
+
+.list{
+  a.ng-enter{
+    -webkit-animation: fadeInLeft 1s;
+    animation: fadeInLeft 1s;
+  }
+}
