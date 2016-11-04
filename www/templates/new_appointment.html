@@ -1,0 +1,82 @@
+<ion-view>
+  <ion-nav-bar class="bar-dark">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+
+    <ion-nav-title>
+      New Appointment
+    </ion-nav-title>
+
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+      </button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+      <button class="button button-icon" ng-click="logout()" ng-show="loggedInUser">
+        <i class="icon ion-android-exit"></i>
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content>
+  <div class="list card">
+    <div class="item item-divider">
+      Appointment Information
+    </div>
+    <div class="list">
+      <label class="item item-input">
+        <i class="icon ion-person placeholder-icon"></i>
+        <input type="text" placeholder="Name" ng-model="ctrl.app.title">
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-clipboard placeholder-icon"></i>
+        <textarea placeholder="Comments" ng-model="ctrl.app.comments" rows="5"></textarea>
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-calendar placeholder-icon"></i>
+        <span class="input-label placeholder-icon">Start Date</span>
+        <!--<input type="date" ng-model="ctrl.patient.startDate">-->
+        <input type="date" ng-model="ctrl.app.startTime"/>
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-calendar placeholder-icon"></i>
+        <span class="input-label placeholder-icon">Start Time</span>
+        <!--<input type="date" ng-model="ctrl.patient.startDate">-->
+        <input type="time" ng-model="ctrl.app.startTime"/>
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-calendar placeholder-icon"></i>
+        <span class="input-label placeholder-icon">End Date</span>
+        <!--<input type="date" ng-model="ctrl.patient.startDate">-->
+        <input type="date" ng-model="ctrl.app.endTime"/>
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-calendar placeholder-icon"></i>
+        <span class="input-label placeholder-icon">End Time</span>
+        <!--<input type="date" ng-model="ctrl.patient.startDate">-->
+        <input type="time" ng-model="ctrl.app.endTime"/>
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-calendar placeholder-icon"></i>
+        <span class="input-label placeholder-icon">All Day Appointment?</span>
+        <!--<input type="date" ng-model="ctrl.patient.startDate">-->
+        <ion-checkbox ng-model="ctrl.app.allDay"></ion-checkbox>
+      </label>
+    </div>
+
+  </div>
+
+</ion-content>
+
+<div class="tabs tabs-icon-top">
+  <a class="tab-item" ng-click="ctrl.save()">
+    <i class="icon ion-checkmark"></i>
+    Save
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-close" ng-click="ctrl.cancel()"></i>
+    Cancel
+  </a>
+</div>
+</ion-view>

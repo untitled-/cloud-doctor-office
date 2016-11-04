@@ -27,20 +27,18 @@
     <div class="list">
       <label class="item item-input">
         <i class="icon ion-person placeholder-icon"></i>
-        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Name" ng-model="ctrl.patient.name">
       </label>
       <label class="item item-input">
         <i class="icon ion-camera placeholder-icon"></i>
-        <button class="button button-clear button-stable">
-          Take Picture
-        </button>
+        <input type="file" class="button button-clear button-stable" placeholder="Take Picture" ng-model="ctrl.patient.picture"/>
       </label>
       <label class="item item-input item-select">
         <i class="icon ion-transgender placeholder-icon"></i>
         <div class="input-label placeholder-icon">
           Gender
         </div>
-        <select>
+        <select ng-model="ctrl.patient.gender">
           <option selected>Female</option>
           <option>Male</option>
           <option>Transgender</option>
@@ -49,42 +47,42 @@
       <label class="item item-input">
         <i class="icon ion-calendar placeholder-icon"></i>
         <span class="input-label placeholder-icon">Birthdate</span>
-        <input type="date">
+        <input type="date" ng-model="ctrl.patient.dateOfBirth">
       </label>
       <label class="item item-input">
         <i class="icon ion-map placeholder-icon"></i>
-        <input type="text" placeholder="Birthplace">
+        <input type="text" placeholder="Birthplace" ng-model="ctrl.patient.birthplace">
       </label>
       <label class="item item-input">
         <i class="icon ion-home placeholder-icon"></i>
-        <input type="text" placeholder="Address">
+        <input type="text" placeholder="Address" ng-model="ctrl.patient.address">
       </label>
       <label class="item item-input">
         <i class="icon ion-iphone placeholder-icon"></i>
-        <input type="tel" placeholder="Phone">
+        <input type="tel" placeholder="Phone" ng-model="ctrl.patient.phone">
       </label>
       <label class="item item-input">
         <i class="icon ion-email placeholder-icon"></i>
-        <input type="email" placeholder="Mail">
+        <input type="email" placeholder="Mail" ng-model="ctrl.patient.mail">
       </label>
       <label class="item item-input">
         <i class="icon ion-briefcase placeholder-icon"></i>
-        <input type="text" placeholder="Ocupation">
+        <input type="text" placeholder="Ocupation" ng-model="ctrl.patient.ocupation">
       </label>
       <label class="item item-input">
         <i class="icon ion-star placeholder-icon"></i>
-        <input type="text" placeholder="Religion">
+        <input type="text" placeholder="Religion" ng-model="ctrl.patient.religion">
       </label>
       <label class="item item-input">
         <i class="icon ion-clipboard placeholder-icon"></i>
-        <textarea placeholder="Religion Restrictions"></textarea>
+        <textarea placeholder="Religion Restrictions" ng-model="ctrl.patient.religionRestrictions"></textarea>
       </label>
       <label class="item item-input item-select">
         <i class="icon ion-heart placeholder-icon"></i>
         <div class="input-label placeholder-icon">
           Marital Status
         </div>
-        <select>
+        <select ng-model="ctrl.patient.maritalStatus">
           <option selected>Single</option>
           <option>Married</option>
           <option>Concubinage</option>
@@ -97,7 +95,7 @@
         <div class="input-label placeholder-icon">
           Scholarship
         </div>
-        <select>
+        <select ng-model="ctrl.patient.scholarship">
           <option selected>Primary school</option>
           <option>Middle school</option>
           <option>Highshool</option>
@@ -110,7 +108,7 @@
         <div class="input-label placeholder-icon">
           Blood Type
         </div>
-        <select>
+        <select ng-model="ctrl.patient.bloodType">
           <option selected>0+</option>
           <option>O-</option>
           <option>A+</option>
@@ -126,14 +124,14 @@
         <div class="input-label placeholder-icon">
           Health Insurance Type
         </div>
-        <select>
+        <select ng-model="ctrl.patient.insuranceType">
           <option selected>Public</option>
           <option>Private</option>
         </select>
       </label>
       <label class="item item-input">
         <i class="icon ion-asterisk placeholder-icon"></i>
-        <input type="text" placeholder="Social Security ID">
+        <input type="text" placeholder="Social Security ID" ng-model="ctrl.patient.ssn">
       </label>
     </div>
   </div>
@@ -141,7 +139,7 @@
 </ion-content>
 
 <div class="tabs tabs-icon-top">
-  <a class="tab-item">
+  <a class="tab-item" ng-click="ctrl.save()">
     <i class="icon ion-checkmark"></i>
     Save
   </a>

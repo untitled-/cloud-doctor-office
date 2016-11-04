@@ -1,0 +1,43 @@
+<ion-view>
+
+  <ion-nav-bar class="bar-dark">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+
+    <ion-nav-title>
+      {{ctrl.viewTitle}}
+    </ion-nav-title>
+
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+      </button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+      <button class="button button-icon" ng-click="logout()" ng-show="loggedInUser">
+        <i class="icon ion-android-exit"></i>
+      </button>
+      <button class="button" ng-disabled="ctrl.isToday()" ng-click="ctrl.today()">Today</button>
+      <button class="button" ng-click="ctrl.changeMode('month')">M</button>
+      <button class="button" ng-click="ctrl.changeMode('week')">W</button>
+      <button class="button" ng-click="ctrl.changeMode('day')">D</button>
+    </ion-nav-buttons>
+
+  </ion-nav-bar>
+
+<ion-content scroll="false" class="main-content">
+  <!--<ion-refresher on-refresh="ctrl.doRefresh()"></ion-refresher>-->
+  <calendar ng-model="ctrl.currentDate" calendar-mode="ctrl.mode" event-source="ctrl.eventSource" step="30"
+            title-changed="ctrl.onViewTitleChanged(title)"
+            time-selected="ctrl.onTimeSelected(selectedTime, events)"
+            event-selected="ctrl.onEventSelected(event)"/>
+</ion-content>
+
+  <div class="tabs tabs-icon-top">
+    <a class="tab-item" ui-sref="newAppointment({selectedTime: ctrl.selectedTime})">
+      <i class="icon ion-person-add"></i>
+      Add Appointment
+    </a>
+  </div>
+
+</ion-view>

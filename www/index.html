@@ -8,6 +8,7 @@
   <link rel="manifest" href="manifest.json">
 
   <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="lib/ionic-calendar/dist/css/calendar.min.css" rel="stylesheet"/>
   <link href="lib/animate.css/animate.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 
@@ -20,6 +21,7 @@
 
   <!-- cordova script (this will be a 404 during development) -->
   <script src="cordova.js"></script>
+  <script src="lib/ionic-calendar/dist/js/calendar-tpls.min.js"></script>
 
   <!-- your app's js -->
   <script src="js/app.js"></script>
@@ -41,15 +43,15 @@
     </ion-header-bar>
     <ion-content>
       <div class="list">
-        <a class="item item-icon-left" href="#">
+        <a class="item item-icon-left" ui-sref="calendar" menu-close>
           <i class="icon ion-calendar"></i>
           Calendar
         </a>
-        <a class="item item-icon-left" href="#">
+        <a class="item item-icon-left" ui-sref="patients" menu-close>
           <i class="icon ion-clock"></i>
           Daily Appointments
         </a>
-        <a class="item item-icon-left" ui-sref="patients">
+        <a class="item item-icon-left" ui-sref="patients" menu-close>
           <i class="icon ion-person-stalker"></i>
           Patient List
         </a>
@@ -58,5 +60,6 @@
   </ion-side-menu>
 
 </ion-side-menus>
+
 </body>
 </html>
